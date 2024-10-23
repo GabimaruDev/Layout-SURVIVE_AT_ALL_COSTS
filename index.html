@@ -11,23 +11,28 @@
     <script defer src="./swiper/swiper.js"></script>
     <script async src="./script.js"></script>
 </head>
-<body class="font-open-sans">
-    <header class="wrapper absolute top-6 w-full mx-auto left-1/2 -translate-x-1/2 font-bold flex items-center justify-between">
-        <a href=""><img class="w-[55px]" src="image/logo.png" alt=""></a>
-        <ul class="header__list max-lg:hidden">
-            <li><a class="hover:text-orange-300 transition-colors duration-300" href="#welcome">MAIN</a></li>
-            <li><a class="hover:text-orange-300 transition-colors duration-300" href="#about">ABOUT</a></li>
-            <li><a class="hover:text-orange-300 transition-colors duration-300" href="#features">GAME FEATURES</a></li>
-            <li><a class="hover:text-orange-300 transition-colors duration-300" href="#!">SYSTEM REQUIREMENTS</a></li>
-            <li><a class="hover:text-orange-300 transition-colors duration-300" href="#!">QUOTES</a></li>
-        </ul>
+<body class="body font-open-sans">
+    <header class="header wrapper z-[1] w-full mx-auto lg:py-6 max-lg:py-2 left-1/2 absolute -translate-x-1/2 font-bold flex items-center justify-between transition-all">
+        <a href="" class="z-[1]"><img class="w-[55px]" src="image/logo.png" alt=""></a>
+        <nav class="header__menu z-[2]">
+            <ul class="header__list max-lg:hidden ">
+                <li><a class="hover:text-orange-300 transition-colors duration-300" href="#welcome">MAIN</a></li>
+                <li><a class="hover:text-orange-300 transition-colors duration-300" href="#about">ABOUT</a></li>
+                <li><a class="hover:text-orange-300 transition-colors duration-300" href="#features">GAME FEATURES</a></li>
+                <li><a class="hover:text-orange-300 transition-colors duration-300" href="#systemRequirements">SYSTEM REQUIREMENTS</a></li>
+                <li><a class="hover:text-orange-300 transition-colors duration-300" href="#!">QUOTES</a></li>
+            </ul>
+        </nav>
         <div class="flex items-center gap-4 font-normal">
-            <div class="border-e-[1px] border-white relative">
-                <div class="cursor-pointer leading-tight relative text-3xl pr-6 mr-4 transition-colors duration-300 language-after">ENG
+            <div class="language-wrapper relative border-e-[1px] border-white">
+                <div class="language language-after pr-6 mr-4 relative">
+                    <button class="language-button cursor-pointer leading-tight relative text-3xl transition-colors duration-300">
+                        ENG
+                    </button>
                     <ul class="language-list">
-                        <li><button>RUS</button></li>
-                        <li><button>FRA</button></li>
-                        <li><button>DEU</button></li>
+                        <li>RUS</li>
+                        <li>FRA</li>
+                        <li>DEU</li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +59,7 @@
         </div>
     </header>
 
-    <section id="welcome" class="section">
+    <section id="welcome">
         <div class="swiper swiper-first select-none">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./image/bg-first.jpg" alt=""></div>
@@ -67,16 +72,18 @@
             <div class="text-center">
                 <h1 class="title">SURVIVE AT ALL COSTS</h1>
                 <p class="subtitle mb-7">EXPIRIENCE NEW SOCIAL BATTLE ROYALE GAME</p>
-                <a class="button">Buy now on Steam | $14.99</a>
+                <a class="button" href="#!">Buy now on Steam | $14.99</a>
             </div>
         </div>
         <a class="the-story" href="#about">
             <p class="first__arrow-down">THE STORY</p>
-            <span class="w-6 h-3"></span>
+            <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.5786 1.83362H1.32422L11.338 10.0027L21.5786 1.83362Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </a>
     </section>
 
-    <section id="about" class="section">
+    <section id="about">
         <div class="wrapper flex justify-center items-center max-lg:flex-col w-full gap-10 lg:gap-14">
             <div class="flex flex-col lg:w-full">
                 <p class="subtitle">WHAT IS SOS?</p>
@@ -88,7 +95,7 @@
                 <div class="flex justify-end mt-7">
                     <div class="max-w-[23rem] ml-5 text-[calc(14px+4*((100vw-320px)/1120))]">
                         <p class="mb-4">Each round, <b class="font-bold">you</b> and <b class="font-bold">15</b> other contestants compete to escape a deadly island filled with monsters. The trick is: <b class="font-bold">three</b> people can survive. Will you run solo or form friendships with others to escape?</p>
-                        <p>Making the right decisions could be the difference between <span class="underline underline-offset-2 decoration-[#FFB548]">life and death</span>.</p>
+                        <p>Making the right decisions could be the difference between <span class="underline underline-offset-2 decoration-[#E93830]">life and death</span>.</p>
                     </div>
                 </div>
             </div>
@@ -107,8 +114,43 @@
     </section>
 
     <section id="features">
+        <div class="wrapper sm:w-1/2 flex flex-col items-end">
+            <div class="flex flex-col">
+                <p class="subtitle">What’s so special?</p>
+                <h2 class="title pb-10">features</h2>
+                <div data-tab="tab-1" class="accordion">
+                    <span></span>
+                    <button class="accordion__title">SURVIVE AT ALL COSTS</button>
+                    <p id="tab-1" class="accordion__content">
+                        You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper.
+                    </p>
+                </div>
+                <div data-tab="tab-2" class="accordion">
+                    <span></span>
+                    <button class="accordion__title">CREATE ALLIES AND ENEMIES</button>
+                    <p id="tab-2" class="accordion__content">
+                        You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper.
+                    </p>
+                </div>
+                <div data-tab="tab-3" class="accordion">
+                    <span></span>
+                    <button class="accordion__title">IMPRESS THE AUDIENCE</button>
+                    <p id="tab-3" class="accordion__content">
+                        You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="systemRequirements">
         <div class="wrapper">
-            <div class="third__content">
+            <div class="">
+                <p class="subtitle text-center">Can My Computer Run this game?</p>
+                <h2 class="title">system requirements</h2>
+            </div>
+            <div class="">
+
             </div>
         </div>
     </section>

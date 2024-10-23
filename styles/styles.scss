@@ -16,21 +16,38 @@
     font-weight: normal;
 }
 
+$orange-color: #FFB548;
+$red-color: #E93830;
+
 body {
     color: #fff;
 }
 
-.section {
+.lock-screen {
+    overflow: hidden;
+}
+
+section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100svh;
+    min-height: 100svh;
+    padding: 20px 0;
 }
 
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.header_active {
+    &::before {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        inset: 0
+    }
 }
 
 .header__list {
@@ -42,16 +59,21 @@ body {
     letter-spacing: .04rem;
 }
 
-.header__right-menu {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 500;
+.language {
+    cursor: pointer;
 
-    > * {
-        display: flex;
-        gap: 10px;
+    &:hover {
+        color: $orange-color;
+        .language-list {
+            visibility: visible;
+            opacity: 1;
+        }
     }
+}
+
+.open .language-list {
+    visibility: visible;
+    opacity: 1;
 }
 
 .language-after {
@@ -64,44 +86,35 @@ body {
         height: 10px;
         background: url('../image/welcome/arrow-down.svg') center / cover no-repeat;
         transform: translateY(-50%);
-        transition: transform 0.25s ease-in-out, background 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     }
 
-    &:hover{
-        color: #FFB548;
-        .language-list {
-            opacity: 1;
-        }
-
-        &::after {
-            background: url('../image/welcome/arrow-down_orange.svg') center / cover no-repeat;
-            transform: translateY(-50%) rotate(180deg);
-        }
+    &:hover::after {
+        background: url('../image/welcome/arrow-down-orange.svg') center / cover no-repeat;
+        transform: translateY(-50%) rotate(180deg);
     }
 }
 
 
 .language-list {
-    background-color: #000;
-    padding: 5px;
-    padding-right: 15px;
     position: absolute;
     top: 100%;
     left: -5px;
+    background-color: #000;
+    padding: 5px;
+    padding-right: 15px;
     font-size: xx-large;
     line-height: 120%;
+    visibility: hidden;
     opacity: 0;
     border-radius: 4px;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    color: #fff;
+    cursor: pointer;
 
-    button {
-        color: #fff;
-        background-color: #000;
-        cursor: pointer;
-
-        &:hover {
-            color: #FFB548;
-        }
+    li:hover {
+        color: $orange-color;
+        transition: color 0.3s ease-in-out;
     }
 }
 
@@ -125,20 +138,20 @@ body {
 
 .swiper-first {
     position: absolute;
-    top: 0;
-    width: 100%;
     z-index: -1;
-    height: 100svh;
+    width: 100%;
+    height: 100%;
 
     img {
         object-fit: cover;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
     }
 }
 
 #welcome {
     flex-direction: column;
+    position: relative;
 }
 
 .title {
@@ -150,15 +163,12 @@ body {
     letter-spacing: .04rem;
 }
 
-.first-subtitle {
-    margin-bottom: 30px;
-}
-
 .subtitle {
     font-family: 'Bebas Neue';
     font-size: clamp(1.125rem, 0.9643rem + 0.7143vw, 1.5rem);
     line-height: 130%;
     letter-spacing: .15rem;
+    margin-left: 2px;
 }
 
 .button {
@@ -166,8 +176,8 @@ body {
     font-weight: bolder;
     display: block;
     max-width: fit-content;
-    background-color: #FFB548;
-    color: #1a1917;
+    background-color: $orange-color;
+    color: #000;
     border-radius: 4px;
     padding: 15px 20px;
     margin: 0 auto;
@@ -190,36 +200,30 @@ body {
     bottom: 15%;
     align-items: center;
     cursor: pointer;
-    
-    span {
-        background-image: url('../image/arrow-down.svg');
-    }
 
     &:hover {
-        p {
-            color: #FFB548;
-        }
+        color: $orange-color;
+    }
 
-        span {
-            background-image: url('../image/arrow-down-orange.svg');
-        }
+    path {
+        stroke: currentColor;
     }
 }
 
 #about {
-    background: url('../image/about/bg-about.png') center / cover;
+    background: url('../image/about/bg-about.jpg') center / cover no-repeat;   
 }
 
 .swiper-second {
     display: flex;
     width: calc(225px + 275*((100vw - 320px) / 1120));
-    height: calc(270px + 340*((100vw - 320px) / 1120));
+    min-height: calc(270px + 340*((100vw - 320px) / 1120));
 
     .swiper-slide {
         img {
             object-fit: cover;
             width: 100%;
-            height: 100%;
+            min-height: 100%;
         }
     }
 
@@ -266,8 +270,58 @@ body {
 
 
 #features {
-    display: flex;
-    align-items: center;
-    height: 100svh;
-    background: url('../image/bg-third.jpg') center / cover ;
+    background: url('../image/bg-third.jpg') center / cover;
+}
+
+.accordion {
+    position: relative;
+    transition: all 0.33s ease-in-out;
+    cursor: pointer;
+}
+
+.accordion span {
+    position: absolute;
+    top: 11px;
+    left: -30px;
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    transition: background 0.15s ease-in-out;
+}
+
+.accordion__active span {
+    background: #fff;
+    z-index: 2;
+}
+
+.accordion__active::after {
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: -25px;
+    transform: translateX(50%);
+    width: 4px;
+    height: calc(100% - 14px);
+    background: #fff;
+}
+
+.accordion__title {
+    font-family: 'Bebas Neue';
+    font-size: calc(22px + 15*((100vw - 320px) / 1120));
+    color: $orange-color;
+    position: relative;
+}
+
+.accordion__content {
+    font-size: calc(14px + 4*((100vw - 320px) / 1120));
+    width: 250px;
+    margin: 0 0 12px;
+    overflow: hidden;
+    max-height: 0;
+    transition: overflow 0.33s ease-in-out, max-height 0.33s ease-in-out;
+}
+
+#systemRequirements {
+    background: url('../image/bg-four.jpg') center / cover;
 }
