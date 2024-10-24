@@ -32,7 +32,7 @@ section {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .header_active::before {
@@ -99,9 +99,11 @@ section {
   color: #fff;
   cursor: pointer;
 }
+.language-list li {
+  transition: color 0.3s ease-in-out;
+}
 .language-list li:hover {
   color: #FFB548;
-  transition: color 0.3s ease-in-out;
 }
 
 .header__button-link path {
@@ -136,7 +138,7 @@ section {
 .title {
   margin: 0;
   font-family: "Bebas Neue";
-  font-size: clamp(2.5rem, 1.4286rem + 4.7619vw, 5rem);
+  font-size: calc(33px + 47 * (100vw - 320px) / 1120);
   font-weight: 500;
   line-height: 95%;
   letter-spacing: 0.04rem;
@@ -144,10 +146,18 @@ section {
 
 .subtitle {
   font-family: "Bebas Neue";
-  font-size: clamp(1.125rem, 0.9643rem + 0.7143vw, 1.5rem);
+  font-size: calc(18px + 6 * (100vw - 320px) / 1120);
   line-height: 130%;
   letter-spacing: 0.15rem;
   margin-left: 2px;
+  padding-bottom: 10px;
+}
+
+.text {
+  font-size: calc(14px + 4 * (100vw - 320px) / 1120);
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
 }
 
 .button {
@@ -281,7 +291,6 @@ section {
 }
 
 .accordion__content {
-  font-size: calc(14px + 4 * (100vw - 320px) / 1120);
   width: 250px;
   margin: 0 0 12px;
   overflow: hidden;
