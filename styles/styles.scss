@@ -114,7 +114,7 @@ section {
 
     li {
         transition: color 0.3s ease-in-out;
-        
+
         &:hover {
             color: $orange-color;
         }
@@ -191,7 +191,6 @@ section {
     color: #000;
     border-radius: 4px;
     padding: 15px 20px;
-    margin: 0 auto;
     cursor: pointer;
     transition: background-color .3s;
 
@@ -334,4 +333,30 @@ section {
 
 #systemRequirements {
     background: url('../image/bg-four.jpg') center / cover;
+}
+
+#quotes {
+    background: url('../image/quotes/bg-quotes.jpg') center / cover;
+}
+
+.quotes__card {
+    max-width: 500px;
+    background-color: #1b1d1e;
+    border-radius: 50%;
+    border-radius: 0.5rem;
+    padding: 15px 20px 20px 15px;
+    margin-bottom: 1.875rem;
+}
+
+.quotes__img {
+    box-shadow: 8px 4px 0 $orange-color;
+}
+
+.quotes__name {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 120%;
+    color: $orange-color;
+    letter-spacing: 2px;
 }
