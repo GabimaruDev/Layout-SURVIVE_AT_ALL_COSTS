@@ -32,7 +32,7 @@ section {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .header_active::before {
@@ -141,7 +141,7 @@ section {
   font-size: calc(33px + 47 * (100vw - 320px) / 1120);
   font-weight: 500;
   line-height: 95%;
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.05rem;
 }
 
 .subtitle {
@@ -325,4 +325,15 @@ section {
   line-height: 120%;
   color: #FFB548;
   letter-spacing: 2px;
+}
+
+.newsletter__email {
+  background: #1c1e1f;
+  color: #FFB548;
+}
+.newsletter__email::-moz-placeholder {
+  color: #FFB548;
+}
+.newsletter__email::placeholder {
+  color: #FFB548;
 }/*# sourceMappingURL=styles.css.map */

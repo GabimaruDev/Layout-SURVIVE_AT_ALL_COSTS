@@ -38,7 +38,7 @@ section {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .header_active {
@@ -163,7 +163,7 @@ section {
     font-size: calc(33px + 47*((100vw - 320px) / 1120));
     font-weight: 500;
     line-height: 95%;
-    letter-spacing: .04rem;
+    letter-spacing: .05rem;
 }
 
 .subtitle {
@@ -359,4 +359,14 @@ section {
     line-height: 120%;
     color: $orange-color;
     letter-spacing: 2px;
+}
+
+
+.newsletter__email {
+    background: #1c1e1f;
+    color: $orange-color;
+
+    &::placeholder {
+        color: $orange-color;
+    }
 }
