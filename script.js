@@ -1,12 +1,14 @@
 const body = document.querySelector('.body'),
-    header = document.querySelector('.header'),
+    headerMenu = document.querySelector('.header__menu'),
+    headerList = document.querySelector('.header__list'),
     headerButton = document.querySelector('.header__button'),
     thirdLine = headerButton.querySelector('.third-line');
 
 headerButton.addEventListener('click', () => {
-    headerButton.classList.toggle('width-line')
-    header.classList.toggle('header_active')
     body.classList.toggle('lock-screen')
+    headerButton.classList.toggle('width-line')
+    headerMenu.classList.toggle('header__menu-active')
+    headerList.classList.toggle('header__list-active')
 })
 
 

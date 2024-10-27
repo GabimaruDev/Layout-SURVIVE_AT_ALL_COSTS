@@ -1,5 +1,6 @@
 new Swiper('.swiper-first', {
     loop: true,
+    allowTouchMove: false,
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
