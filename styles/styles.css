@@ -83,12 +83,12 @@ section {
 .language:hover {
   color: #FFB548;
 }
-.language:hover .language-list {
+.language:hover .language__list {
   visibility: visible;
   opacity: 1;
 }
 
-.open .language-list {
+.open .language__list {
   visibility: visible;
   opacity: 1;
 }
@@ -109,7 +109,7 @@ section {
   transform: translateY(-50%) rotate(180deg);
 }
 
-.language-list {
+.language__list {
   position: absolute;
   top: 100%;
   left: -5px;
@@ -125,10 +125,10 @@ section {
   color: #fff;
   cursor: pointer;
 }
-.language-list li {
+.language__list li {
   transition: color 0.3s ease-in-out;
 }
-.language-list li:hover {
+.language__list li:hover {
   color: #FFB548;
 }
 

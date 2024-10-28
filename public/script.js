@@ -1,6 +1,7 @@
 const body = document.querySelector('.body'),
     headerMenu = document.querySelector('.header__menu'),
     headerList = document.querySelector('.header__list'),
+    headerItem = document.querySelectorAll('.header__item'),
     headerButton = document.querySelector('.header__button'),
     thirdLine = headerButton.querySelector('.third-line');
 
@@ -11,7 +12,12 @@ headerButton.addEventListener('click', () => {
     headerList.classList.toggle('header__list-active')
 })
 
-
+headerItem.forEach(item => item.addEventListener('click', () => {
+    body.classList.toggle('lock-screen')
+    headerButton.classList.remove('width-line')
+    headerMenu.classList.remove('header__menu-active')
+    headerList.classList.remove('header__list-active')
+}))
 
 
 const language = document.querySelector('.language');
