@@ -20,17 +20,6 @@ headerItem.forEach(item => item.addEventListener('click', () => {
 }))
 
 
-const language = document.querySelector('.language');
-
-document.addEventListener('click', e => {
-    if (e.target == language) {
-        language.classList.toggle('open')
-    } else if (language.classList.contains('open')) {
-        language.classList.remove('open')
-    }
-})
-
-
 const accordions = document.querySelectorAll('.accordion'),
     titles = document.querySelectorAll('.accordion__title'),
     contents = document.querySelectorAll('.accordion__content');
