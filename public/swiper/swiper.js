@@ -15,7 +15,6 @@ new Swiper('.swiper-second', {
     },
     pagination: {
         el: '.swiper-pagination',
-        clickable: true
     },
     keyboard: {
         enabled: true
