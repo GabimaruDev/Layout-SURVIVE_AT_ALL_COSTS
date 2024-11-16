@@ -2,8 +2,7 @@ const body = document.querySelector('.body'),
     headerMenu = document.querySelector('.header__menu'),
     headerList = document.querySelector('.header__list'),
     headerItem = document.querySelectorAll('.header__item'),
-    headerButton = document.querySelector('.header__button'),
-    thirdLine = headerButton.querySelector('.third-line');
+    headerButton = document.querySelector('.header__button');
 
 headerButton.addEventListener('click', () => {
     body.classList.toggle('lock-screen')
