@@ -8,7 +8,7 @@
     <link href="./swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="./styles/normalize.css" rel="stylesheet">
     <link href="./styles/styles.css" rel="stylesheet">
-    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script defer src="./swiper/swiper-bundle.min.js"></script>
     <script defer src="./swiper/swiper.js"></script>
     <script async src="./script.js"></script>
 </head>
@@ -16,7 +16,7 @@
     <main>
         <header class="wrapper z-[11] w-full mx-auto lg:py-6 max-lg:py-2 left-1/2 absolute -translate-x-1/2 font-bold flex items-center justify-between transition-all">
             <a href="" class="z-[3]">
-                <img class="w-[55px]" src="./image/logo.png" alt="">
+                <img class="min-w-[55px]" width="55" height="55" src="./image/logo.png" alt="">
             </a>
             <nav aria-label="main" class="header__menu">
                 <ul class="header__list">
@@ -86,10 +86,10 @@
             </div>
             <div class="swiper swiper-first !z-0 select-none">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./image/bg-first.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/bg-second.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/bg-third.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/bg-four.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/bg-first.jpg" height="960" width="1440" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/bg-second.jpg" height="960" width="1440" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/bg-third.jpg" height="960" width="1440" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/bg-four.jpg" height="960" width="1440" alt=""></div>
                 </div>
                 <div class="flex justify-center">
                     <a class="the-story" href="#about">
@@ -120,9 +120,9 @@
                 </div>
                 <div class="swiper swiper-second lg:pr-5 h-[calc(270px+340*((100vw-320px)/1120))] w-[calc(225px+275*((100vw-320px)/1120))] ">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./image/about/screenshot1.jpg" alt="a large totem with the number 8 on the background of tribal buildings, forests and mountains"></div>
-                        <div class="swiper-slide"><img src="./image/about/screenshot2.jpg" alt="tribal buildings on the background of trees and mountains"></div>
-                        <div class="swiper-slide"><img src="./image/about/screenshot3.jpg" alt="sea view of the water and a small area of the island, in the water a statuette with the inscription 'Hero'"></div>
+                        <div class="swiper-slide"><img src="./image/about/screenshot1.jpg" loading="lazy" height="768" width="859" alt="a large totem with the number 8 on the background of tribal buildings, forests and mountains"></div>
+                        <div class="swiper-slide"><img src="./image/about/screenshot2.jpg" loading="lazy" height="768" width="859" alt="tribal buildings on the background of trees and mountains"></div>
+                        <div class="swiper-slide"><img src="./image/about/screenshot3.jpg" loading="lazy" height="768" width="859" alt="sea view of the water and a small area of the island, in the water a statuette with the inscription 'Hero'"></div>
                     </div>
                     <div class="swiper-button-prev absolute -left-8 mt-4"></div>
                     <div class="swiper-button-next absolute -right-8 lg:-right-3 mt-4"></div>
@@ -204,7 +204,7 @@
                 <div class="md:max-w-[600px]">
                     <div class="quotes__card md:max-w-[500px] md:ml-[6.25rem]">
                         <div class="flex mb-[1.625rem]">
-                            <img class="quotes__img rounded-full mr-6 w-16 h-16" src="./image/quotes/evan.jpg" alt="">
+                            <img class="quotes__img rounded-full mr-6 w-16 h-16" width="64" height="64" width="64" height="64" src="./image/quotes/evan.jpg" loading="lazy" alt="">
                             <div class="flex flex-col justify-center mr-5">
                                 <cite class="quotes__name">Evan Lahti</cite>
                                 <span class="text-[#8d8d8d]">PC Gamer</span>
@@ -220,7 +220,7 @@
                     </div>
                     <div class="quotes__card md:max-w-[500px] md:mr-[6.25rem]">
                         <div class="flex mb-[1.625rem]">
-                            <img class="quotes__img rounded-full mr-6 w-16 h-16" src="./image/quotes/jada.jpg" alt="">
+                            <img class="quotes__img rounded-full mr-6 w-16 h-16" width="64" height="64" src="./image/quotes/jada.jpg" loading="lazy" alt="">
                             <div class="flex flex-col justify-center mr-5">
                                 <cite class="quotes__name">Jada Griffin</cite>
                                 <span class="text-[#8d8d8d]">Nerdreactor</span>
@@ -236,7 +236,7 @@
                     </div>
                     <div class="quotes__card md:max-w-[500px] md:ml-[6.25rem]">
                         <div class="flex mb-[1.625rem]">
-                            <img class="quotes__img rounded-full mr-6 w-16 h-16" src="./image/quotes/aaron.jpg" alt="">
+                            <img class="quotes__img rounded-full mr-6 w-16 h-16" width="64" height="64" src="./image/quotes/aaron.jpg" loading="lazy" alt="">
                             <div class="flex flex-col justify-center mr-5">
                                 <cite class="quotes__name">Aaron Williams</cite>
                                 <span class="text-[#8d8d8d]">Uproxx</span>
@@ -257,7 +257,7 @@
         <section id="newsletter" class="bg-[#080A0B] ">
             <div class="wrapper flex gap-8 items-center relative">
                 <div class="max-lg:absolute max-lg:left-[-100px]">
-                    <img src="./image/newsletter-image.png" class="w-full max-lg:max-w-60 max-lg:mb-20" alt="a statuette of a skull with an orange stone stuck in it from above">
+                    <img src="./image/newsletter-image.png" width="320" height="498" loading="lazy" class="w-full max-lg:max-w-60 max-lg:mb-20" alt="a statuette of a skull with an orange stone stuck in it from above">
                 </div>
                 <div class="flex flex-col z-10">
                     <div class="max-lg:ml-28 max-w-2xl max-lg:max-w-xl">
@@ -280,7 +280,7 @@
             <div class="wrapper">
                 <div class="flex max-md:flex-col gap-8 items-center justify-between mx-auto pb-8 border-b border-[rgba(255,255,255,.6)] mb-5">
                     <a href="" class="z-[1]">
-                        <img class="min-w-[55px] w-[55px]" src="./image/logo.png" alt="">
+                        <img class="min-w-[55px]" src="./image/logo.png" loading="lazy" width="55" height="55" alt="">
                     </a>
                     <nav class="z-[2]">
                         <ul class="flex gap-5 mx-10 flex-wrap whitespace-nowrap justify-center text-[calc(14px+4*((100vw-320px)/1120))] font-bold leading-[120%] tracking-[0.04rem]">

@@ -81,7 +81,7 @@ section {
   cursor: pointer;
 }
 .language:hover {
-  color: #FFB548;
+  color: #ffb548;
 }
 .language:hover .language__list {
   visibility: visible;
@@ -129,7 +129,7 @@ section {
   transition: color 0.3s ease-in-out;
 }
 .language__list li:hover {
-  color: #FFB548;
+  color: #ffb548;
 }
 
 .header__button-link path {
@@ -192,7 +192,7 @@ section {
   display: block;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  background-color: #FFB548;
+  background-color: #ffb548;
   color: #000;
   border-radius: 4px;
   padding: 15px 20px;
@@ -216,7 +216,7 @@ section {
   transition: all 0.2s ease-in-out;
 }
 .the-story:hover {
-  color: #FFB548;
+  color: #ffb548;
 }
 .the-story path {
   stroke: currentColor;
@@ -311,7 +311,7 @@ section {
 .accordion__title {
   font-family: "Bebas Neue";
   font-size: calc(22px + 15 * (100vw - 320px) / 1120);
-  color: #FFB548;
+  color: #ffb548;
   position: relative;
 }
 
@@ -341,7 +341,7 @@ section {
 }
 
 .quotes__img {
-  box-shadow: 8px 4px 0 #FFB548;
+  box-shadow: 8px 4px 0 #ffb548;
 }
 
 .quotes__name {
@@ -349,7 +349,7 @@ section {
   font-style: normal;
   font-size: 24px;
   line-height: 120%;
-  color: #FFB548;
+  color: #ffb548;
   letter-spacing: 2px;
 }
 
@@ -357,14 +357,14 @@ section {
   transition: fill 0.3s ease-in-out;
 }
 .facebook:hover path {
-  fill: #0866FF;
+  fill: #0866ff;
 }
 
 .twitter path {
   transition: fill 0.3s ease-in-out;
 }
 .twitter:hover path {
-  fill: #249EF0;
+  fill: #249ef0;
 }
 
 .youtube path {

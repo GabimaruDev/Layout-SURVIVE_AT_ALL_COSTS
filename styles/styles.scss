@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Bebas Neue';
-    src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-family: "Bebas Neue";
+    src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
-$orange-color: #FFB548;
-$red-color: #E93830;
+$orange-color: #ffb548;
+$red-color: #e93830;
 
 body {
     color: #fff;
@@ -41,7 +41,7 @@ section {
     .lock-screen {
         overflow: hidden;
     }
-    
+
     .header__menu {
         display: block;
         position: fixed;
@@ -51,11 +51,11 @@ section {
         bottom: 100%;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, .85);
+        background: rgba(0, 0, 0, 0.85);
         padding: 100px 30px 30px;
         margin: 0;
         z-index: 1;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     .header__menu-active {
@@ -85,7 +85,7 @@ section {
     font-size: calc(14px + 4 * ((100vw - 320px) / 1120));
     font-weight: bold;
     line-height: 120%;
-    letter-spacing: 0.04rem
+    letter-spacing: 0.04rem;
 }
 
 .language {
@@ -107,23 +107,22 @@ section {
 
 .language-after {
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0;
         width: 20px;
         height: 10px;
-        background: url('../image/welcome/arrow-down.svg') center / cover no-repeat;
+        background: url("../image/welcome/arrow-down.svg") center / cover no-repeat;
         transform: translateY(-50%);
         transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     }
 
     &:hover::after {
-        background: url('../image/welcome/arrow-down-orange.svg') center / cover no-repeat;
+        background: url("../image/welcome/arrow-down-orange.svg") center / cover no-repeat;
         transform: translateY(-50%) rotate(180deg);
     }
 }
-
 
 .language__list {
     position: absolute;
@@ -154,7 +153,7 @@ section {
     path {
         transition: fill 0.2s ease-in-out;
     }
-    
+
     &:hover {
         path {
             fill: #fff;
@@ -188,31 +187,31 @@ section {
 
 .title {
     margin: 0;
-    font-family: 'Bebas Neue';
-    font-size: calc(33px + 47*((100vw - 320px) / 1120));
+    font-family: "Bebas Neue";
+    font-size: calc(33px + 47 * ((100vw - 320px) / 1120));
     font-weight: 500;
     line-height: 95%;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
 }
 
 .subtitle {
-    font-family: 'Bebas Neue';
-    font-size: calc(18px + 6*((100vw - 320px) / 1120));
+    font-family: "Bebas Neue";
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1120));
     line-height: 130%;
-    letter-spacing: .15rem;
+    letter-spacing: 0.15rem;
     margin-left: 2px;
     padding-bottom: 10px;
 }
 
 .text {
-    font-size: calc(14px + 4*((100vw - 320px) / 1120));
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1120));
     line-height: 120%;
     font-weight: 400;
-    letter-spacing: .04rem;
+    letter-spacing: 0.04rem;
 }
 
 .button {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bolder;
     display: block;
     max-width: fit-content;
@@ -221,7 +220,7 @@ section {
     border-radius: 4px;
     padding: 15px 20px;
     cursor: pointer;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
 
     &:hover {
         background-color: #fff;
@@ -229,9 +228,9 @@ section {
 }
 
 .the-story {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bold;
-    font-size: calc(14px + 4*((100vw - 320px) / 1120));
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1120));
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -250,13 +249,13 @@ section {
 }
 
 #about {
-    background: url('../image/about/bg-about.jpg') center / cover no-repeat;   
+    background: url("../image/about/bg-about.jpg") center / cover no-repeat;
 }
 
 .swiper-second {
     display: flex;
-    width: calc(225px + 275*((100vw - 320px) / 1120));
-    min-height: calc(270px + 340*((100vw - 320px) / 1120));
+    width: calc(225px + 275 * ((100vw - 320px) / 1120));
+    min-height: calc(270px + 340 * ((100vw - 320px) / 1120));
 
     .swiper-slide {
         img {
@@ -267,9 +266,9 @@ section {
     }
 
     .swiper-button-prev {
-        background: url('../image/arrow-left.svg') center no-repeat;
+        background: url("../image/arrow-left.svg") center no-repeat;
         &:hover {
-            background: url('../image/arrow-left-orange.svg') center no-repeat;
+            background: url("../image/arrow-left-orange.svg") center no-repeat;
         }
 
         &::after {
@@ -278,9 +277,9 @@ section {
     }
 
     .swiper-button-next {
-        background: url('../image/arrow-right.svg') center no-repeat;
+        background: url("../image/arrow-right.svg") center no-repeat;
         &:hover {
-            background: url('../image/arrow-right-orange.svg') center no-repeat;
+            background: url("../image/arrow-right-orange.svg") center no-repeat;
         }
 
         &::after {
@@ -296,7 +295,7 @@ section {
             height: 14px;
             border: #fff 2px solid;
             margin: 0 20px;
-            opacity: .8;
+            opacity: 0.8;
             background: none;
         }
 
@@ -307,9 +306,8 @@ section {
     }
 }
 
-
 #features {
-    background: url('../image/bg-third.jpg') center / cover;
+    background: url("../image/bg-third.jpg") center / cover;
 }
 
 .accordion {
@@ -335,7 +333,7 @@ section {
 }
 
 .accordion__active::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 26px;
     left: -25px;
@@ -346,8 +344,8 @@ section {
 }
 
 .accordion__title {
-    font-family: 'Bebas Neue';
-    font-size: calc(22px + 15*((100vw - 320px) / 1120));
+    font-family: "Bebas Neue";
+    font-size: calc(22px + 15 * ((100vw - 320px) / 1120));
     color: $orange-color;
     position: relative;
 }
@@ -361,11 +359,11 @@ section {
 }
 
 #systemRequirements {
-    background: url('../image/bg-four.jpg') center / cover;
+    background: url("../image/bg-four.jpg") center / cover;
 }
 
 #quotes {
-    background: url('../image/quotes/bg-quotes.jpg') center / cover;
+    background: url("../image/quotes/bg-quotes.jpg") center / cover;
 }
 
 .quotes__card {
@@ -382,7 +380,7 @@ section {
 }
 
 .quotes__name {
-    font-family: 'Bebas Neue';
+    font-family: "Bebas Neue";
     font-style: normal;
     font-size: 24px;
     line-height: 120%;
@@ -397,7 +395,7 @@ section {
 
     &:hover {
         path {
-            fill: #0866FF;
+            fill: #0866ff;
         }
     }
 }
@@ -409,7 +407,7 @@ section {
 
     &:hover {
         path {
-            fill: #249EF0;
+            fill: #249ef0;
         }
     }
 }
