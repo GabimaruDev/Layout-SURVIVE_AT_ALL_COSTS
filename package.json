@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://iamgabimaru.github.io/Layout3-SURVIVE_AT_ALL_COSTS",
+  "homepage": "https://iamgabimaru.github.io/Layout-SURVIVE_AT_ALL_COSTS",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
