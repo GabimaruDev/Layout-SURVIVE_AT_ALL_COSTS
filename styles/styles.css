@@ -1,20 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(./normalize.css);
+@import url(./reset.css);
+
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "Bebas Neue";
   src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
+
+:root {
+  --second-font: "Bebas Neue", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --orange-color: #ffb548;
+}
+
 body {
   color: #fff;
+  background-color: #000;
+  font-family: "Open Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
@@ -44,12 +59,19 @@ section {
 .language {
   cursor: pointer;
 }
+
 .language:hover {
-  color: #ffb548;
+  color: var(--orange-color);
 }
+
 .language:hover .language__list {
   visibility: visible;
   opacity: 1;
+}
+
+.language:hover .language-after::after {
+  background: url("../image/welcome/arrow-down-orange.svg") center/cover no-repeat;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .open .language__list {
@@ -68,6 +90,7 @@ section {
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
+
 .language-after:hover::after {
   background: url("../image/welcome/arrow-down-orange.svg") center/cover no-repeat;
   transform: translateY(-50%) rotate(180deg);
@@ -89,16 +112,19 @@ section {
   color: #fff;
   cursor: pointer;
 }
+
 .language__list li {
   transition: color 0.3s ease-in-out;
 }
+
 .language__list li:hover {
-  color: #ffb548;
+  color: var(--orange-color);
 }
 
 .header__button-link path {
   transition: fill 0.2s ease-in-out;
 }
+
 .header__button-link:hover path {
   fill: #fff;
 }
@@ -113,9 +139,10 @@ section {
   width: 100%;
   height: 100%;
 }
+
 .swiper-first img {
   -o-object-fit: cover;
-     object-fit: cover;
+    object-fit: cover;
   width: 100%;
   min-height: 100%;
 }
@@ -127,7 +154,7 @@ section {
 
 .title {
   margin: 0;
-  font-family: "Bebas Neue";
+  font-family: var(--second-font);
   font-size: calc(33px + 47 * (100vw - 320px) / 1120);
   font-weight: 500;
   line-height: 95%;
@@ -135,7 +162,7 @@ section {
 }
 
 .subtitle {
-  font-family: "Bebas Neue";
+  font-family: var(--second-font);
   font-size: calc(18px + 6 * (100vw - 320px) / 1120);
   line-height: 130%;
   letter-spacing: 0.15rem;
@@ -151,24 +178,23 @@ section {
 }
 
 .button {
-  font-family: "Open Sans";
   font-weight: bolder;
   display: block;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  background-color: #ffb548;
+  background-color: var(--orange-color);
   color: #000;
   border-radius: 4px;
   padding: 15px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .button:hover {
   background-color: #fff;
 }
 
 .the-story {
-  font-family: "Open Sans";
   font-weight: bold;
   font-size: calc(14px + 4 * (100vw - 320px) / 1120);
   display: flex;
@@ -179,9 +205,11 @@ section {
   align-items: center;
   transition: all 0.2s ease-in-out;
 }
+
 .the-story:hover {
-  color: #ffb548;
+  color: var(--orange-color);
 }
+
 .the-story path {
   stroke: currentColor;
 }
@@ -195,33 +223,42 @@ section {
   width: calc(225px + 275 * (100vw - 320px) / 1120);
   min-height: calc(270px + 340 * (100vw - 320px) / 1120);
 }
+
 .swiper-second .swiper-slide img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   min-height: 100%;
 }
+
 .swiper-second .swiper-button-prev {
   background: url("../image/arrow-left.svg") center no-repeat;
 }
+
 .swiper-second .swiper-button-prev:hover {
   background: url("../image/arrow-left-orange.svg") center no-repeat;
 }
+
 .swiper-second .swiper-button-prev::after {
   display: none;
 }
+
 .swiper-second .swiper-button-next {
   background: url("../image/arrow-right.svg") center no-repeat;
 }
+
 .swiper-second .swiper-button-next:hover {
   background: url("../image/arrow-right-orange.svg") center no-repeat;
 }
+
 .swiper-second .swiper-button-next::after {
   display: none;
 }
+
 .swiper-second .swiper-pagination {
   margin-bottom: 20px;
 }
+
 .swiper-second .swiper-pagination .swiper-pagination-bullet {
   width: 14px;
   height: 14px;
@@ -230,6 +267,7 @@ section {
   opacity: 0.8;
   background: none;
 }
+
 .swiper-second .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #fff;
   opacity: 1;
@@ -273,9 +311,9 @@ section {
 }
 
 .accordion__title {
-  font-family: "Bebas Neue";
+  font-family: var(--second-font);
   font-size: calc(22px + 15 * (100vw - 320px) / 1120);
-  color: #ffb548;
+  color: var(--orange-color);
   position: relative;
 }
 
@@ -298,28 +336,28 @@ section {
 .quotes__card {
   max-width: 500px;
   background-color: #1b1d1e;
-  border-radius: 50%;
   border-radius: 0.5rem;
   padding: 15px 20px 20px 15px;
   margin-bottom: 1.875rem;
 }
 
 .quotes__img {
-  box-shadow: 8px 4px 0 #ffb548;
+  box-shadow: 8px 4px 0 var(--orange-color);
 }
 
 .quotes__name {
-  font-family: "Bebas Neue";
+  font-family: var(--second-font);
   font-style: normal;
   font-size: 24px;
   line-height: 120%;
-  color: #ffb548;
+  color: var(--orange-color);
   letter-spacing: 2px;
 }
 
 .facebook path {
   transition: fill 0.3s ease-in-out;
 }
+
 .facebook:hover path {
   fill: #0866ff;
 }
@@ -327,6 +365,7 @@ section {
 .twitter path {
   transition: fill 0.3s ease-in-out;
 }
+
 .twitter:hover path {
   fill: #249ef0;
 }
@@ -334,6 +373,7 @@ section {
 .youtube path {
   transition: fill 0.3s ease-in-out;
 }
+
 .youtube:hover path {
   fill: red;
 }
@@ -341,6 +381,7 @@ section {
 .twitch path {
   transition: fill 0.3s ease-in-out;
 }
+
 .twitch:hover path {
   fill: #9146ff;
 }
@@ -349,6 +390,7 @@ section {
   .lock-screen {
     overflow: hidden;
   }
+
   .header__menu {
     display: block;
     position: fixed;
@@ -364,10 +406,12 @@ section {
     z-index: 1;
     transition: all 0.3s ease-in-out;
   }
+
   .header__menu-active {
     height: 100svh;
     top: 0;
   }
+
   .header__menu .header__list {
     gap: 2.5rem;
     font-size: 1.5rem;
@@ -377,7 +421,8 @@ section {
     align-items: start;
     display: none;
   }
+
   .header__menu .header__list-active {
     display: flex;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
